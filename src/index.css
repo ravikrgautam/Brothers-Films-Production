@@ -27,9 +27,7 @@
 
 /* Feature 1: Custom Cursor (Hide OS Cursor) */
 @media (pointer: fine) {
-  *, *::before, *::after {
-    cursor: none !important;
-  }
+
 }
 
 /* Feature 2: Scrollbar Hiding for Film Strip */

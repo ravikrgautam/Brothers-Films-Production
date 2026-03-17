@@ -11,6 +11,7 @@ import Showreel from './components/Showreel';
 import News from './components/News';
 import Community from './components/Community';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -18,12 +19,12 @@ function App() {
   return (
     <>
       <CustomCursor />
-      
+
       <AnimatePresence>
         {!loaded && <Loader onComplete={() => setLoaded(true)} />}
       </AnimatePresence>
 
-      <main 
+      <main
         className="bg-darkBase min-h-screen text-white relative font-barlow selection:bg-white/20"
         style={{ opacity: loaded ? 1 : 0, transition: 'opacity 0.4s' }}
       >
@@ -31,6 +32,7 @@ function App() {
         <Navbar />
         <Hero />
         <About />
+        <Portfolio />
         <FeatureDetail />
         <Showreel />
         <News />
