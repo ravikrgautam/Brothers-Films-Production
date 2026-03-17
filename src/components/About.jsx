@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import WipeReveal from './WipeReveal';
-import teamImg from '../assets/brothersfilmsproduction.png';
+import teamImg from '../assets/images/0S5A0698.webp';
 
 const fadeUp = {
   initial: { y: 40, opacity: 0 },
@@ -106,7 +106,7 @@ const About = () => {
             <img
               src={teamImg}
               alt="Brothers Films Team"
-              className="w-full h-[340px] object-cover object-center"
+              className="w-full h-[370px] object-cover object-center"
             />
           </WipeReveal>
         </motion.div>

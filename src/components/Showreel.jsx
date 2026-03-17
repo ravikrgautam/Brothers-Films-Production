@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import showreelThumb from '../assets/images/0S5A0647.webp';
+import showreelThumb from '../assets/images/bg-03.webp';
 
 const fadeUp = {
   initial: { y: 40, opacity: 0 },
@@ -26,7 +26,7 @@ const Showreel = () => {
       {/* Content */}
       <div className="relative z-20 flex flex-col md:flex-row items-center justify-between h-full px-6 lg:px-[64px]">
         {/* Left Side */}
-        <motion.div 
+        <motion.div
           className="w-full md:w-[45%] flex flex-col justify-center"
           variants={fadeUp}
           initial="initial"
@@ -41,7 +41,7 @@ const Showreel = () => {
         </motion.div>
 
         {/* Center Play Button */}
-        <motion.button 
+        <motion.button
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[64px] h-[64px] rounded-full flex items-center justify-center transition-all duration-300 pointer-events-auto"
           style={{
             border: '1px solid rgba(255,255,255,0.5)',
@@ -53,7 +53,7 @@ const Showreel = () => {
         </motion.button>
 
         {/* Right Side */}
-        <motion.div 
+        <motion.div
           className="w-full md:w-auto mt-8 md:mt-0 flex justify-center md:justify-end pointer-events-auto"
           variants={fadeUp}
           initial="initial"

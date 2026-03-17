@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
-import heroMain from '../assets/images/hero-main.jpg';
+import heroMain from '../assets/images/bg-01.webp';
 
 const Hero = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -31,7 +31,7 @@ const Hero = () => {
         <img
           src={heroMain}
           alt="Brothers Films Production"
-          className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-55"
         />
       </motion.div>
 
@@ -40,7 +40,7 @@ const Hero = () => {
         className="absolute z-10 font-bebas text-white leading-none whitespace-nowrap"
         style={{
           bottom: '48%',
-          left: '-8px',
+          right: '0px',
           letterSpacing: '-2px',
           fontSize: '100px'
         }}
