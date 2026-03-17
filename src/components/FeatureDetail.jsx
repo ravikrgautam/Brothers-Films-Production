@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ImagePlaceholder from './ImagePlaceholder';
 import WipeReveal from './WipeReveal';
+
+import detailWed from '../assets/images/0S5A0659.webp';
+import detailPort from '../assets/images/0S5A0698.webp';
+import detailCandid from '../assets/images/0S5A0708.webp';
+import detailStudio from '../assets/images/0S5A0742.webp';
+import detailBts from '../assets/images/0S5A1002.webp';
 
 const fadeUp = {
   initial: { y: 40, opacity: 0 },
@@ -38,7 +43,7 @@ const FeatureDetail = () => {
             <div className="w-full lg:w-[55%] h-[400px]">
               <WipeReveal delay={0} className="w-full h-full">
                 <img
-                  src="/src/assets/images/0S5A0659.webp"
+                  src={detailWed}
                   alt="Wedding detail"
                   className="w-full h-[400px] object-cover object-center"
                 />
@@ -47,7 +52,7 @@ const FeatureDetail = () => {
             <div className="w-full lg:w-[45%] h-[400px] relative overflow-hidden group">
               <WipeReveal delay={0.15} className="w-full h-full">
                 <img
-                  src="/src/assets/images/0S5A0698.webp"
+                  src={detailPort}
                   alt="Portrait close-up"
                   className="w-full h-[400px] object-cover object-center"
                 />
@@ -78,7 +83,7 @@ const FeatureDetail = () => {
             <div className="w-full lg:w-[45%] h-[250px]">
               <WipeReveal delay={0.1} className="w-full h-full">
                 <img
-                  src="/src/assets/images/0S5A0708.webp"
+                  src={detailCandid}
                   alt="Candid moment"
                   className="w-full h-[250px] object-cover object-center"
                 />
@@ -92,7 +97,7 @@ const FeatureDetail = () => {
           <div className="flex-1 h-[450px]">
             <WipeReveal delay={0} className="w-full h-full">
               <img
-                src="/src/assets/images/0S5A0742.webp"
+                src={detailStudio}
                 alt="Studio interior"
                 className="w-full h-[450px] object-cover object-center"
               />
@@ -101,7 +106,7 @@ const FeatureDetail = () => {
           <div className="flex-1 h-[450px]">
             <WipeReveal delay={0.15} className="w-full h-full">
               <img
-                src="/src/assets/images/0S5A1002.webp"
+                src={detailBts}
                 alt="Behind the scenes"
                 className="w-full h-[450px] object-cover object-center"
               />

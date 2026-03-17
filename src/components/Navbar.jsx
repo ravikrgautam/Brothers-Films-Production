@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoUrl from '../assets/Logo white.PNG';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,7 +16,8 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    audioRef.current = new Audio('./src/assets/sounds/ambient.mp3');
+    // Missing file fallback for Vercel deploy
+    audioRef.current = new Audio('/ambient.mp3');
     audioRef.current.loop = true;
     audioRef.current.volume = 0.15;
     return () => audioRef.current?.pause();
@@ -42,12 +44,12 @@ const Navbar = () => {
     >
       {/* Left */}
       <div className="flex items-center">
-        <img src="./src/assets/logo white.png" alt="Brothers Films Logo" className="h-[70px] w-auto object-contain" />
+        <img src={logoUrl} alt="Brothers Films Logo" className="h-[70px] w-auto object-contain" />
       </div>
 
       {/* Center - hidden on mobile */}
       <div className="hidden md:flex items-center space-x-8">
-        {['About', 'Portfolio', 'Services', 'Updates', 'Contact'].map((item) => (
+        {['About', 'Services', 'Updates', 'Contact'].map((item) => (
           <a data-cursor="button" key={item} href={`#${item.toLowerCase()}`} className="font-barlow font-normal text-[13px] text-[#AAAAAA] hover:text-white transition-colors duration-200">
             {item}
           </a>

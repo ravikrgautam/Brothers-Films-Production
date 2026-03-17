@@ -1,4 +1,5 @@
 import React from 'react';
+import logoUrl from '../assets/Logo white.PNG';
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
         {/* Top Row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="flex items-center">
-            <img src="./src/assets/logo white.png" alt="Brothers Films Logo" className="h-[80px] w-auto object-contain" />
+            <img src={logoUrl} alt="Brothers Films Logo" className="h-[80px] w-auto object-contain" />
           </div>
           <div className="flex gap-3">
             {/* Social Icons */}
@@ -21,7 +22,7 @@ const Footer = () => {
 
         {/* Middle Row (Nav Links) */}
         <div className="flex flex-wrap gap-[24px] mt-[24px]">
-          {['About', 'Portfolio', 'Services', 'Careers', 'Contact Us'].map((link, idx) => (
+          {['About', 'Services', 'Careers', 'Contact Us'].map((link, idx) => (
             <a key={idx} href={`#${link.toLowerCase()}`} className="font-inter font-normal text-[14px] text-[#888888] hover:text-white transition-colors">
               {link}
             </a>

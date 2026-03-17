@@ -15,6 +15,11 @@ const Portfolio = () => {
   const containerRef = useRef(null);
   const [lightboxOpen, setLightboxOpen] = React.useState(false);
   const [currentIndex, setCurrentIndex] = React.useState(0);
+  const [isMounted, setIsMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -43,6 +48,8 @@ const Portfolio = () => {
     setCurrentIndex(index);
     setLightboxOpen(true);
   };
+
+  if (!isMounted) return null;
 
   if (typeof window !== 'undefined' && !containerRef.current) {
     // Suppress warning/render issues before ref mount if any layout issues occur

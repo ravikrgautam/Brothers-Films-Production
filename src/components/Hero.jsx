@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, useSpring } from 'framer-motion';
+import heroMain from '../assets/images/hero-main.jpg';
 
 const Hero = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -28,7 +29,7 @@ const Hero = () => {
         style={{ scale: 1.06 }}
       >
         <img
-          src="./src/assets/images/hero-main.jpg"
+          src={heroMain}
           alt="Brothers Films Production"
           className="absolute inset-0 w-full h-full object-cover object-center opacity-85"
         />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ImagePlaceholder from './ImagePlaceholder';
+import showreelThumb from '../assets/images/0S5A0647.webp';
 
 const fadeUp = {
   initial: { y: 40, opacity: 0 },
@@ -15,7 +15,7 @@ const Showreel = () => {
       {/* Background Image Placeholder */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/images/showreel-thumb.jpg"
+          src={showreelThumb}
           alt="Brothers Films Showreel"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />

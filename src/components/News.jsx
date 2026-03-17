@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ImagePlaceholder from './ImagePlaceholder';
 import WipeReveal from './WipeReveal';
 import Lightbox from './Lightbox';
+
+import news1 from '../assets/images/0S5A0659.webp';
+import news2 from '../assets/images/0S5A0698.webp';
+import news3 from '../assets/images/0S5A0708.webp';
 
 const fadeUp = {
   initial: { y: 40, opacity: 0 },
@@ -27,19 +30,19 @@ const fromRight = {
 
 const newsCards = [
   {
-    img: '/src/assets/images/0S5A0659.webp',
+    img: news1,
     title: 'Brothers Films Unveils New Season Collection and Expanded Portfolio',
     desc: 'Explore our newest work across weddings, portraits, and brand campaigns from the 2025 season.',
     date: '15 March 2025'
   },
   {
-    img: '/src/assets/images/0S5A0698.webp',
+    img: news2,
     title: 'Brothers Films Launches Premium Wedding Package for 2025 Season',
     desc: 'New all-inclusive wedding packages now available with cinematic film add-ons and same-day highlights.',
     date: '10 March 2025'
   },
   {
-    img: '/src/assets/images/0S5A0708.webp',
+    img: news3,
     title: 'Brothers Films Introduces Innovative Same-Day Edits for Events',
     desc: 'Receive a curated highlight reel delivered within 24 hours of your event. Available for all bookings.',
     date: '05 March 2025'

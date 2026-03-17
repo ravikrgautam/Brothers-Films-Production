@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 const sections = [
   { id: 'hero',       label: 'Home' },
   { id: 'about',      label: 'About' },
-  { id: 'portfolio',  label: 'Portfolio' },
   { id: 'detail',     label: 'Our Work' },
   { id: 'showreel',   label: 'Showreel' },
   { id: 'news',       label: 'Updates' },
@@ -24,8 +23,8 @@ const SectionLabel = () => {
             if (match) {
               setActiveSection(match.label);
               
-              // Light sections: about, portfolio, news, detail
-              const lightSections = ['about', 'portfolio', 'news', 'detail'];
+              // Light sections: about, news, detail
+              const lightSections = ['about', 'news', 'detail'];
               setIsDarkBg(!lightSections.includes(entry.target.id));
             }
           }

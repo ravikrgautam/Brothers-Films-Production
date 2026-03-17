@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import communityBg from '../assets/brothersfilmsproduction.png';
 import ImagePlaceholder from './ImagePlaceholder';
 
 const fadeUp = {
@@ -15,7 +16,7 @@ const Community = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/assets/brothersfilmsproduction.png"
+          src={communityBg}
           alt="Brothers Films Community"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />

@@ -6,7 +6,6 @@ import SectionLabel from './components/SectionLabel';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Portfolio from './components/Portfolio';
 import FeatureDetail from './components/FeatureDetail';
 import Showreel from './components/Showreel';
 import News from './components/News';
@@ -32,7 +31,6 @@ function App() {
         <Navbar />
         <Hero />
         <About />
-        <Portfolio />
         <FeatureDetail />
         <Showreel />
         <News />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, useSpring } from 'framer-motion';
 
 const CustomCursor = () => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [mousePos, setMousePos] = useState({ x: -100, y: -100 });
   const [cursorType, setCursorType] = useState('default');
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
