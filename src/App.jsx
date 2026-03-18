@@ -8,6 +8,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import FeatureDetail from './components/FeatureDetail';
 import Showreel from './components/Showreel';
+import Reviews from './components/Reviews';
 import News from './components/News';
 import Community from './components/Community';
 import Footer from './components/Footer';
@@ -31,10 +32,11 @@ function App() {
         <SectionLabel />
         <Navbar />
         <Hero />
+        <Showreel />
         <About />
         <Portfolio />
         <FeatureDetail />
-        <Showreel />
+        <Reviews />
         <News />
         <Community />
         <Footer />
