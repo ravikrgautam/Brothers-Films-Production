@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoUrl from '../assets/Logo white.PNG';
+import { navigationItems } from '../navigation';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -43,15 +43,29 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
     >
       {/* Left */}
-      <div className="flex items-center">
-        <img src={logoUrl} alt="Brothers Films Logo" className="h-[70px] w-auto object-contain" />
-      </div>
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        style={{
+          fontFamily: "'DM Sans', sans-serif",
+          fontWeight: 700,
+          fontSize: '15px',
+          color: 'white',
+          textDecoration: 'none',
+          cursor: 'pointer',
+        }}
+      >
+        Brothers Films
+      </a>
 
       {/* Center - hidden on mobile */}
       <div className="hidden md:flex items-center space-x-8">
-        {['About', 'Services', 'Updates', 'Contact'].map((item) => (
-          <a data-cursor="button" key={item} href={`#${item.toLowerCase()}`} className="font-barlow font-normal text-[13px] text-[#AAAAAA] hover:text-white transition-colors duration-200">
-            {item}
+        {navigationItems.map((item) => (
+          <a data-cursor="button" key={item.label} href={item.href} className="font-barlow font-normal text-[13px] text-[#AAAAAA] hover:text-white transition-colors duration-200">
+            {item.label}
           </a>
         ))}
       </div>
@@ -59,7 +73,7 @@ const Navbar = () => {
       {/* Right */}
       <div className="flex items-center">
         {/* Sound Toggle */}
-        <button
+        {/* <button
           onClick={toggleSound}
           className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-white/50 transition-colors mr-3"
           title={soundOn ? 'Mute' : 'Play ambient sound'}
@@ -79,7 +93,7 @@ const Navbar = () => {
               </motion.svg>
             )}
           </AnimatePresence>
-        </button>
+        </button> */}
 
         <a data-cursor="button" href="tel:918585217287" className="bg-white text-black px-[18px] py-[8px] rounded-[4px] font-barlow font-bold text-[12px] hover:bg-gray-200 transition-colors">
           DIAL NOW - +91 85952 17287

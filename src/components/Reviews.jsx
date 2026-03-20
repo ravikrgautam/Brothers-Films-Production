@@ -3,11 +3,20 @@ import { motion } from 'framer-motion';
 
 const reviews = [
   {
+    id: 5,
+    name: 'Aakash Upadhyay',
+    rating: 5,
+    timeAgo: '10 days ago',
+    review: "Professional, creative, and very friendly team. They made us feel comfortable throughout the shoot and delivered stunning results.",
+    initials: 'AU',
+    color: '#A142F4',
+  },
+  {
     id: 1,
     name: 'Raima Paul',
     rating: 5,
     timeAgo: 'a month ago',
-    review: "They gave helpful directions during the shoot and made sure we were comfortable. The final pictures looked clean and well edited. Overall, I'm happy with the service.",
+    review: "They gave helpful directions during the shoot and made sure we were comfortable. The final pictures looked clean and well edited.",
     initials: 'RP',
     color: '#4285F4',
   },
@@ -16,7 +25,7 @@ const reviews = [
     name: 'Kshitiz Gupta',
     rating: 5,
     timeAgo: 'a month ago',
-    review: 'Good service and nice results. The pictures came out clear and natural, just what I wanted.',
+    review: 'Good service and nice results. The pictures came out clear and natural, just what I wanted. Overall, I’m happy with the service',
     initials: 'KG',
     color: '#34A853',
   },
@@ -25,34 +34,25 @@ const reviews = [
     name: 'Anant Prakash',
     rating: 5,
     timeAgo: 'a year ago',
-    review: "That's really good to handle the customer's, according to requirements.",
+    review: "That's really good to handle the customer's, according to requirements. Supportive team and awesome work",
     initials: 'AP',
     color: '#EA4335',
   },
   {
     id: 4,
-    name: 'Ankur Kumar',
+    name: 'Mendy',
     rating: 5,
-    timeAgo: '4 years ago',
-    review: 'I have awesome experience with them and satisfaction by their super work, and also they have good team for managing.',
+    timeAgo: '3 years ago',
+    review: 'Such an amazing experience, they have got some excellent skills and i would recommend everyone to work with them',
     initials: 'AK',
     color: '#FBBC05',
-  },
-  {
-    id: 5,
-    name: 'Aakash Upadhyay',
-    rating: 5,
-    timeAgo: '10 months ago',
-    review: "It's really amazing work experience with them. I'm very satisfied with their work...that's great.",
-    initials: 'AU',
-    color: '#A142F4',
   },
   {
     id: 6,
     name: 'Love Sharma',
     rating: 5,
     timeAgo: '4 years ago',
-    review: 'Great place to shoot weddings, pre-weddings, post-weddings, events, cinematic video, etc. I am satisfied with your work, and they have an incredible team of photographers.',
+    review: 'Great place to shoot weddings, pre-weddings, post-weddings, events, cinematic video, etc. I am satisfied with your work.',
     initials: 'LS',
     color: '#24A994',
   },
@@ -81,14 +81,14 @@ export default function Reviews() {
   const [active, setActive] = useState(null);
 
   return (
-    <section id="reviews" style={{ background: '#080808', padding: '100px 0 80px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+    <section id="testimonials" style={{ background: '#080808', padding: '100px 0 80px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
 
       {/* Header */}
       <div style={{ padding: '0 64px', marginBottom: '64px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '32px' }}>
 
         <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '10px', letterSpacing: '3px', color: '#E8D5B0', textTransform: 'uppercase', marginBottom: '12px' }}>
-            Client Reviews
+            Client Testimonials
           </p>
           <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(36px, 5vw, 64px)', color: '#F0F0F0', lineHeight: 1, letterSpacing: '-0.5px' }}>
             WHAT CLIENTS SAY
@@ -104,9 +104,9 @@ export default function Reviews() {
           </div>
           <div style={{ width: '1px', height: '28px', background: 'rgba(255,255,255,0.08)' }} />
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '22px', fontWeight: 800, color: '#F0F0F0', lineHeight: 1 }}>5.0</span>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '22px', fontWeight: 800, color: '#F0F0F0', lineHeight: 1 }}>4.8</span>
             <div style={{ marginTop: '4px' }}><StarRow /></div>
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '10px', color: '#444', marginTop: '3px' }}>6 reviews</span>
+            <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '12px', color: '#fff', marginTop: '3px' }}>26 reviews</span>
           </div>
         </motion.div>
       </div>
@@ -166,12 +166,13 @@ export default function Reviews() {
 
       {/* Bottom row */}
       <div style={{ padding: '40px 64px 0', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '16px' }}>
-        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '12px', color: '#333', letterSpacing: '0.5px' }}>
+        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '12px', color: '#999', letterSpacing: '0.5px' }}>
           Verified reviews from Google Business Profile
         </p>
         
         <a
-          href="https://www.google.com/search?q=Brothers+Films+Production"
+          // href="https://www.google.com/search?q=Brothers+Films+Production"
+          href="https://www.google.co.in/search?sca_esv=5b6dfac1f9c325dc&sxsrf=ANbL-n5kSE9zYTEw8YHUZesAH1tNR4kfuA:1773945618732&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOdq_N5EZr2-12qUmEAooigiv8kySMDMMpkCs9z-YgUXQ7VwQj6JAAo1jO8d9JWTJXrYKx6rVYhIJW5z2IA_eG-ccHC-ATNgCf_OoUFzgO3ybwypUKg%3D%3D&q=Brothers+Films+Production+Reviews&sa=X&ved=2ahUKEwjpgtKzzqyTAxWZSGcHHXm-I3YQ0bkNegQIJhAH&biw=1358&bih=682&dpr=1"
           target="_blank"
           rel="noopener noreferrer"
           style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: "'DM Sans', sans-serif", fontSize: '12px', fontWeight: 600, color: '#666', textDecoration: 'none', padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '999px', transition: 'all 0.2s' }}

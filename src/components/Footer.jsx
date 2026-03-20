@@ -1,15 +1,29 @@
 import React from 'react';
-import logoUrl from '../assets/Logo white.PNG';
+import { navigationItems } from '../navigation';
 
 const Footer = () => {
   return (
-    <footer className="bg-darkBase px-6 pt-12 pb-8 lg:px-[64px] lg:pt-[48px] lg:pb-[32px] border-t border-[#1E1E1E] relative overflow-hidden">
+    <footer id="footer" className="bg-darkBase px-6 pt-12 pb-8 lg:px-[64px] lg:pt-[48px] lg:pb-[32px] border-t border-[#1E1E1E] relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto relative z-10">
         {/* Top Row */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-          <div className="flex items-center">
-            <img src={logoUrl} alt="Brothers Films Logo" className="h-[80px] w-auto object-contain" />
-          </div>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            style={{
+              fontFamily: "'DM Sans', sans-serif",
+              fontWeight: 700,
+              fontSize: '18px',
+              color: 'white',
+              textDecoration: 'none',
+              cursor: 'pointer',
+            }}
+          >
+            Brothers Films
+          </a>
           <div className="flex gap-3">
             {/* Social Icons */}
             {['X', 'F', 'I', 'Y'].map((icon, idx) => (
@@ -22,9 +36,9 @@ const Footer = () => {
 
         {/* Middle Row (Nav Links) */}
         <div className="flex flex-wrap gap-[24px] mt-[24px]">
-          {['About', 'Services', 'Careers', 'Contact Us'].map((link, idx) => (
-            <a key={idx} href={`#${link.toLowerCase()}`} className="font-inter font-normal text-[14px] text-[#888888] hover:text-white transition-colors">
-              {link}
+          {navigationItems.map((item) => (
+            <a key={item.label} href={item.href} className="font-inter font-normal text-[14px] text-[#888888] hover:text-white transition-colors">
+              {item.label}
             </a>
           ))}
         </div>

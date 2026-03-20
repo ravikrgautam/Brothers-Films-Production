@@ -11,11 +11,36 @@ import Showreel from './components/Showreel';
 import Reviews from './components/Reviews';
 import News from './components/News';
 import Community from './components/Community';
+import VideoShowcase from './components/VideoShowcase';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
+
+  const handleAnchorClick = (event) => {
+    const link = event.target.closest('a[href^="#"]');
+
+    if (!link) {
+      return;
+    }
+
+    const targetId = link.getAttribute('href');
+
+    if (!targetId || targetId === '#') {
+      return;
+    }
+
+    const targetElement = document.querySelector(targetId);
+
+    if (!targetElement) {
+      return;
+    }
+
+    event.preventDefault();
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.history.replaceState(null, '', targetId);
+  };
 
   return (
     <>
@@ -28,6 +53,7 @@ function App() {
       <main
         className="bg-darkBase min-h-screen text-white relative font-barlow selection:bg-white/20"
         style={{ opacity: loaded ? 1 : 0, transition: 'opacity 0.4s' }}
+        onClick={handleAnchorClick}
       >
         <SectionLabel />
         <Navbar />
@@ -38,7 +64,8 @@ function App() {
         <FeatureDetail />
         <Reviews />
         <News />
-        <Community />
+        {/* <Community /> */}
+        <VideoShowcase />
         <Footer />
       </main>
     </>
